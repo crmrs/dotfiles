@@ -7,3 +7,5 @@
 - link: 
     ~/.config/ghostty:
         path: config/ghostty
+    ~/.config/niri: 
+        path: config/niri
