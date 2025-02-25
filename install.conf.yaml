@@ -5,6 +5,7 @@
         create: true
 
 - link: 
+    ~/.zshrc: zshrc 
     ~/.config/ghostty:
         path: config/ghostty
     ~/.config/niri: 
