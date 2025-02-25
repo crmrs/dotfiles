@@ -1,0 +1,23 @@
+blocks:
+  - git
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+
+color:
+  when: always
+  theme: custom
+
+icons:
+  when: always
+
+layout: oneline # list each entry in a separate row
+
+sorting:
+  dir-grouping: first # Folders at the top
+total-size: true # Total size in `ls -l`
+hyperlink: always
+

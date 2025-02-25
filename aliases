@@ -1,0 +1,5 @@
+#!/bin/zsh
+alias ls="lsd"
+alias ll="lsd -l"
+alias tree="lsd --tree"
+alias cat="bat"

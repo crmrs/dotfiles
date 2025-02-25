@@ -6,6 +6,10 @@
 
 - link: 
     ~/.zshrc: zshrc 
+    ~/.config/lsd:
+        path: config/lsd
+    ~/.config/bat:
+        path: config/bat
     ~/.config/ghostty:
         path: config/ghostty
     ~/.config/niri: 
