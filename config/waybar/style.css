@@ -33,6 +33,10 @@ window#waybar {
   color: black;
 }
 
+#workspaces button.empty {
+  color: gray;
+}
+
 #pulseaudio {
   background-color: #737aa2;
 }
