@@ -9,3 +9,5 @@
         path: config/ghostty
     ~/.config/niri: 
         path: config/niri
+    ~/.config/waybar:
+        path: config/waybar

@@ -1,0 +1,75 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top", 
+    "height": 32, 
+    "spacing": 0,
+    "reload_style_on_change": true,
+    "modules-left": [
+	"niri/workspaces"
+    ],
+    "modules-center": [
+        "niri/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        // "backlight",
+        "battery",
+        "clock",
+        "tray"
+    ],
+    "niri/workspaces": {
+    },
+    "niri/window" : {
+	"rewrite": {
+	    "(.*) — Zen Browser": "$1"
+	}
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 4
+    },
+    "clock": {
+	"tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% cpu",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% ram"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% bck"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "bat {capacity}%",
+        "format-full": "bat {capacity}%",
+        "format-charging": "chr {capacity}%",
+        "format-plugged": "plg {capacity}%",
+        "format-alt": "{time}"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{ipaddr}/{cidr}",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "vol {volume}%",
+        "format-muted": "vol -%",
+        "on-click": "pavucontrol"
+    }
+    
+}
+
