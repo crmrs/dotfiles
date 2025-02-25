@@ -1,3 +1,9 @@
+spawn-at-startup "xwayland-satellite"
+
+environment {
+    DISPLAY ":1"
+}
+
 input {
     keyboard {
         xkb {
@@ -70,38 +76,30 @@ layout {
     }
 
     struts {
-        left 32
-        right 32
-        top 32
-        bottom 32
+        left 10
+        right 10
+        top 10
+        bottom 10
     }
 }
-
-// spawn-at-startup "alacritty" "-e" "fish"
 
 prefer-no-csd
 
 screenshot-path "~/Screenshots/%Y-%m-%d_%H-%M-%S.png"
 
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
-animations {
-    // Uncomment to turn off all animations.
-    // off
+workspace "main"
+workspace "hack"
+workspace "chat"
+workspace "play"
+
+window-rule {
+    match app-id="Slack"
+    open-on-workspace "chat"
 }
 
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-window-rule {
-    // This regular expression is intentionally made as specific as possible,
-    // since this is the default config, and we want no false positives.
-    // You can get away with just app-id="wezterm" if you want.
-    match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
-}
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
@@ -200,19 +198,19 @@ binds {
     // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
     // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
 
-    Mod+1 { focus-workspace 1; }
-    Mod+2 { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
+    Mod+1 { focus-workspace "main"; }
+    Mod+2 { focus-workspace "hack"; }
+    Mod+3 { focus-workspace "chat"; }
+    Mod+4 { focus-workspace "play"; }
     Mod+5 { focus-workspace 5; }
     Mod+6 { focus-workspace 6; }
     Mod+7 { focus-workspace 7; }
     Mod+8 { focus-workspace 8; }
     Mod+9 { focus-workspace 9; }
-    Mod+Ctrl+1 { move-column-to-workspace 1; }
-    Mod+Ctrl+2 { move-column-to-workspace 2; }
-    Mod+Ctrl+3 { move-column-to-workspace 3; }
-    Mod+Ctrl+4 { move-column-to-workspace 4; }
+    Mod+Ctrl+1 { move-column-to-workspace "main"; }
+    Mod+Ctrl+2 { move-column-to-workspace "hack"; }
+    Mod+Ctrl+3 { move-column-to-workspace "chat"; }
+    Mod+Ctrl+4 { move-column-to-workspace "play"; }
     Mod+Ctrl+5 { move-column-to-workspace 5; }
     Mod+Ctrl+6 { move-column-to-workspace 6; }
     Mod+Ctrl+7 { move-column-to-workspace 7; }
