@@ -14,5 +14,7 @@
         path: config/ghostty
     ~/.config/niri: 
         path: config/niri
+    ~/.config/fuzzel:
+        path: config/fuzzel
     ~/.config/waybar:
         path: config/waybar
