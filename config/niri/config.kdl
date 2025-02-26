@@ -9,6 +9,7 @@ input {
     keyboard {
         xkb {
 	    layout "pl"
+	    options "caps:hyper"
         }
 	repeat-delay 250
 	repeat-rate 25
