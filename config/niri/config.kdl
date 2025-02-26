@@ -1,5 +1,7 @@
 spawn-at-startup "xwayland-satellite"
 spawn-at-startup "waybar"
+spawn-at-startup "swww-daemon"
+spawn-at-startup "zen-browser-bin"
 
 environment {
     DISPLAY ":1"
