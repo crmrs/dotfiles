@@ -29,12 +29,17 @@ window#waybar {
 
 #workspaces button.active { 
   border-bottom: 2px solid black;
-  background-color: #ffc777;
+  background-color: #FC738A;
   color: black;
+  font-weight: bold;
 }
 
 #workspaces button.empty {
   color: gray;
+}
+
+#workspaces button.active.empty {
+  color: #1A1D28;
 }
 
 #pulseaudio {
