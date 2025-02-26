@@ -98,6 +98,18 @@ window-rule {
     open-on-workspace "chat"
 }
 
+window-rule {
+    match app-id="legcord"
+    open-on-workspace "chat"
+}
+
+window-rule {
+    match app-id="com.mitchellh.ghostty"
+    default-column-width { 
+    	proportion 0.33; 
+    }
+}
+
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
