@@ -34,7 +34,7 @@ input {
 
 // `niri msg outputs` 
 output "eDP-1" {
-    scale 1.35
+    scale 1.25
     position x=1280 y=0
 }
 
@@ -107,7 +107,7 @@ window-rule {
 window-rule {
     match app-id="com.mitchellh.ghostty"
     default-column-width { 
-    	proportion 0.33; 
+    	proportion 0.33333; 
     }
 }
 
@@ -142,9 +142,9 @@ binds {
     Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "fuzzel"; }
     // Super+Alt+L { spawn "swaylock"; }
-    Mod+T { spawn "bash" "-c" "notify-send hello"; }
+    Mod+T { spawn "bash" "-c" "notify-send Title Lorem"; }
 
-    Mod3+W { spawn "~/.dotfiles/scripts/fuzzel-niri-windows.sh"; }
+    Alt+Tab { spawn "~/.dotfiles/scripts/fuzzel-niri-windows.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }

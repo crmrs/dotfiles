@@ -1,0 +1,16 @@
+anchor=top-right
+font=Fira Code Nerd Font Mono 10
+background-color=#1f2335
+text-color=#ffffff
+margin=10,10,10
+padding=10
+border-size=1
+border-color=#ffc777
+border-radius=0
+default-timeout=10000
+group-by=summary
+icons=1
+text-alignment=left
+
+[grouped]
+format=<b>%s</b>\n%b

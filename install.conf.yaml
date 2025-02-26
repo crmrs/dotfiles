@@ -18,3 +18,5 @@
         path: config/fuzzel
     ~/.config/waybar:
         path: config/waybar
+    ~/.config/mako:
+        path: config/mako
