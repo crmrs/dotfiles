@@ -61,6 +61,11 @@ window#waybar {
 #battery {
   background-color: #292e42;
 }
+
+#battery.warning {
+  color: #FC738A;
+}
+
 #clock {
   background-color: #24283b;
 }
