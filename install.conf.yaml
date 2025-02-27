@@ -10,6 +10,8 @@
         path: config/lsd
     ~/.config/bat:
         path: config/bat
+    ~/.config/fastfetch:
+        path: config/fastfetch
     ~/.config/ghostty:
         path: config/ghostty
     ~/.config/niri: 
