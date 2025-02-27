@@ -22,6 +22,7 @@ window#waybar {
 #workspaces button {
   border-radius: 0;
   border-bottom: 2px solid rgba(0,0,0,0.1);
+  padding: 0 10px;
 }
 
 #workspaces button.focused {
