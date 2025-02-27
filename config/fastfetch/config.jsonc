@@ -12,6 +12,8 @@
     },
     "kernel",
     "shell",
+    "editor",
+    "lm",
     "wm",
     "wmtheme",
     "theme",
@@ -21,13 +23,17 @@
     "gpu",
     "memory",
     "swap",
+    {
+        "type": "physicaldisk",
+	"temp": true
+    },
     "disk",
-    "localip",
     {
 	"type": "battery",
 	"key": "Battery"
     },
     "poweradapter",
+    "version",
     "break",
     "colors"
   ]
