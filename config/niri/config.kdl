@@ -33,8 +33,6 @@ input {
     }
 }
 
-
-// `niri msg outputs` 
 output "eDP-1" {
     scale 1.25
     position x=1280 y=0
@@ -44,7 +42,6 @@ layout {
     gaps 10
     center-focused-column "never"
 
-    // For "switch-preset-column-width" (Mod+R) 
     preset-column-widths {
         proportion 0.33333
         proportion 0.5
@@ -52,7 +49,6 @@ layout {
         // fixed 1920
     }
 
-    // For "switch-preset-window-height" (Mod+Shift+R) 
     preset-window-heights {
     	proportion 0.33
 	proportion 0.5
