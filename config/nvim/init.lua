@@ -598,10 +598,31 @@ require('lazy').setup({
     --    - Show your current context: https://github.com/nvim-treesitter/nvim-treesitter-context
     --    - Treesitter + textobjects: https://github.com/nvim-treesitter/nvim-treesitter-textobjects
   },
-
-  -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
-  -- init.lua. If you want these files, they are in the repository, so you can just download them and
-  -- place them in the correct locations.
+  {
+    'mrjones2014/smart-splits.nvim', -- Vim-Tmux-Navigator alternative
+    config = function()
+      local splits = require 'smart-splits'
+      -- recommended mappings
+      -- resizing splits
+      -- these keymaps will also accept a range,
+      -- for example `10<A-h>` will `resize_left` by `(10 * config.default_amount)`
+      -- vim.keymap.set('n', '<A-h>', require('smart-splits').resize_left)
+      -- vim.keymap.set('n', '<A-j>', require('smart-splits').resize_down)
+      -- vim.keymap.set('n', '<A-k>', require('smart-splits').resize_up)
+      -- vim.keymap.set('n', '<A-l>', require('smart-splits').resize_right)
+      -- moving between splits
+      vim.keymap.set('n', '<C-h>', splits.move_cursor_left)
+      vim.keymap.set('n', '<C-j>', splits.move_cursor_down)
+      vim.keymap.set('n', '<C-k>', splits.move_cursor_up)
+      vim.keymap.set('n', '<C-l>', splits.move_cursor_right)
+      -- vim.keymap.set('n', '<C-\\>', require('smart-splits').move_cursor_previous)
+      -- swapping buffers between windows
+      -- vim.keymap.set('n', '<leader><leader>h', require('smart-splits').swap_buf_left)
+      -- vim.keymap.set('n', '<leader><leader>j', require('smart-splits').swap_buf_down)
+      -- vim.keymap.set('n', '<leader><leader>k', require('smart-splits').swap_buf_up)
+      -- vim.keymap.set('n', '<leader><leader>l', require('smart-splits').swap_buf_right)
+    end,
+  },
 
   -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
   --
