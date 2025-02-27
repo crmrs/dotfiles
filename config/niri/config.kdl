@@ -109,15 +109,7 @@ window-rule {
     }
 }
 
-// Window rules let you adjust behavior for individual windows.
-// Find more information on the wiki:
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Open the Firefox picture-in-picture player as floating by default.
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
 }
@@ -140,7 +132,7 @@ binds {
     Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "fuzzel"; }
     // Super+Alt+L { spawn "swaylock"; }
-    Mod+T { spawn "bash" "-c" "notify-send Title Lorem"; }
+    Mod3+T { spawn "bash" "-c" "notify-send Title Lorem"; }
 
     Alt+Tab { spawn "~/.dotfiles/scripts/fuzzel-niri-windows.sh"; }
 
