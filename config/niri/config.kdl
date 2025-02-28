@@ -98,6 +98,11 @@ window-rule {
 }
 
 window-rule {
+    match app-id="thunderbird"
+    open-on-workspace "chat"
+}
+
+window-rule {
     match app-id="legcord"
     open-on-workspace "chat"
 }
