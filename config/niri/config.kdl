@@ -38,9 +38,10 @@ output "eDP-1" {
     position x=1280 y=0
 }
 
+
 layout {
     gaps 10
-    center-focused-column "never"
+    center-focused-column "always"
 
     preset-column-widths {
         proportion 0.33333
@@ -117,6 +118,11 @@ window-rule {
 window-rule {
     match app-id=r#"zen$"# title="^Picture-in-Picture$"
     open-floating true
+}
+
+window-rule {
+    match app-id="Spotify"
+    open-on-workspace "play"
 }
 
 // Example: block out two password managers from screen capture.
