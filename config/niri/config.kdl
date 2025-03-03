@@ -5,6 +5,7 @@ spawn-at-startup "zen-browser"
 
 environment {
     DISPLAY ":1"
+    QT_QPA_PLATFORMTHEME "gtk3"
 }
 
 input {
@@ -41,7 +42,7 @@ output "eDP-1" {
 
 layout {
     gaps 10
-    center-focused-column "always"
+    center-focused-column "on-overflow"
 
     preset-column-widths {
         proportion 0.33333
@@ -125,8 +126,12 @@ window-rule {
     open-on-workspace "play"
 }
 
+window-rule {
+    match title="Close Virtual Machine"
+    open-floating true
+}
+
 // Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
