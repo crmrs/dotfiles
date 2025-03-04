@@ -43,6 +43,7 @@ output "eDP-1" {
 layout {
     gaps 10
     center-focused-column "on-overflow"
+    always-center-single-column
 
     preset-column-widths {
         proportion 0.33333
