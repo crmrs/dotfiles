@@ -98,6 +98,7 @@ workspace "play"
 window-rule {
     match app-id="Slack"
     open-on-workspace "chat"
+    open-focused true
 }
 
 window-rule {
@@ -145,6 +146,7 @@ window-rule {
 
 // `Mod3` denotes `Hyper_L`
 binds {
+    Mod3+XF86AudioMute  { spawn "xdg-open" "https://github.com/YaLTeR/niri/wiki/Configuration:-Overview"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "fuzzel"; }
