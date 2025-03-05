@@ -26,3 +26,5 @@
         path: config/waybar
     ~/.config/mako:
         path: config/mako
+    ~/.config/zathura:
+        path: config/zathura
