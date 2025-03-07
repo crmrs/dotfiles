@@ -154,6 +154,7 @@ binds {
     Mod3+T { spawn "bash" "-c" "notify-send Title Lorem"; }
 
     Alt+Tab { spawn "~/.dotfiles/scripts/fuzzel-niri-windows.sh"; }
+    Mod3+semicolon { spawn "~/.dotfiles/scripts/fuzzel-emoji.sh"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
