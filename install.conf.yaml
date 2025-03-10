@@ -26,5 +26,7 @@
         path: config/waybar
     ~/.config/mako:
         path: config/mako
+    ~/.config/swaylock: 
+        path: config/swaylock
     ~/.config/zathura:
         path: config/zathura

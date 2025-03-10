@@ -147,7 +147,7 @@ window-rule {
     // block-out-from "screencast"
 }
 
-// `Mod3` denotes `Hyper_L`
+// `Mod3` => `Hyper_L`
 binds {
     Mod3+XF86AudioMute  { spawn "xdg-open" "https://github.com/YaLTeR/niri/wiki/Configuration:-Overview"; }
     Mod+Shift+Slash { show-hotkey-overlay; }
@@ -184,7 +184,7 @@ binds {
     Mod+Shift+Home { move-column-to-first; }
     Mod+Shift+End  { move-column-to-last; }
 
-    Ctrl+grave { focus-monitor-next; }
+    Mod+grave { focus-monitor-next; }
 
     // Mod+Shift+H     { focus-monitor-left; }
     // Mod+Shift+J     { focus-monitor-down; }
