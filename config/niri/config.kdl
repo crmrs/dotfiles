@@ -26,7 +26,6 @@ input {
     }
 
     mouse {
-        // off
         // natural-scroll
         // accel-speed 0.2
         // accel-profile "flat"
@@ -52,7 +51,6 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-        // fixed 1920
     }
 
     preset-window-heights {
@@ -74,7 +72,6 @@ layout {
 
     shadow {
         on
-        // draw-behind-window true
         softness 30
         spread 5
         offset x=0 y=5
@@ -97,6 +94,11 @@ workspace "main"
 workspace "hack"
 workspace "chat"
 workspace "play"
+
+window-rule {
+    match app-id="nemo"
+    open-floating true
+}
 
 window-rule {
     match app-id="Slack"
@@ -153,7 +155,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
     Mod+Return { spawn "ghostty"; }
     Mod+Space { spawn "fuzzel"; }
-    // Super+Alt+L { spawn "swaylock"; }
+    Mod3+L { spawn "swaylock"; }
     Mod3+T { spawn "bash" "-c" "notify-send Title Lorem"; }
 
     Alt+Tab { spawn "~/.dotfiles/scripts/fuzzel-niri-windows.sh"; }
@@ -217,15 +219,6 @@ binds {
     Mod+Ctrl+Shift+WheelScrollDown { move-column-right; }
     Mod+Ctrl+Shift+WheelScrollUp   { move-column-left; }
 
-    // Similarly, you can bind touchpad scroll "ticks".
-    // Touchpad scrolling is continuous, so for these binds it is split into
-    // discrete intervals.
-    // These binds are also affected by touchpad's natural-scroll, so these
-    // example binds are "inverted", since we have natural-scroll enabled for
-    // touchpads by default.
-    // Mod+TouchpadScrollDown { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02+"; }
-    // Mod+TouchpadScrollUp   { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.02-"; }
-
     Mod+1 { focus-workspace "main"; }
     Mod+2 { focus-workspace "hack"; }
     Mod+3 { focus-workspace "chat"; }
@@ -256,7 +249,6 @@ binds {
     Mod+Ctrl+R { switch-preset-window-height; }
     Mod+Shift+R { reset-window-height; }
     Mod+F { maximize-column; }
-    // Mod+Shift+F { fullscreen-window; }
     Mod+Shift+F { expand-column-to-available-width; }
     Mod+C { center-column; }
 

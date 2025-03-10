@@ -1,10 +1,7 @@
 ignore-empty-password
-show-keyboard-layout
 indicator-caps-lock
 
 color=24283b
-font="Inter 14"
-indicator-radius=80
 indicator-thickness=20
 key-hl-color=bb9af7
 
