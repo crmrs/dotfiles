@@ -34,11 +34,14 @@ input {
     }
 }
 
-output "eDP-1" {
-    scale 1.25
-    position x=1280 y=0
+output "DP-3" {
+    position x=0 y=0
 }
 
+output "eDP-1" {
+    scale 1.25
+    position x=840 y=1440
+}
 
 layout {
     gaps 10
