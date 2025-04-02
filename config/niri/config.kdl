@@ -131,6 +131,10 @@ window-rule {
 window-rule {
     match app-id="Spotify"
     open-on-workspace "play"
+    open-focused true
+    default-column-width {
+        proportion 1.0;
+    }
 }
 
 window-rule {
